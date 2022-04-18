@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--创建学校对象，并注入值【使用带参构造注入方法】-->
+    <bean id="school" class="org.example.pojo3.School">
+        <constructor-arg name="name" value="CUMT"></constructor-arg>
+        <constructor-arg name="address" value="XuZhou"></constructor-arg>
+    </bean>
+
+    <!--创建学生对象，使用构造方法的下标注入值-->
+    <bean id="stu" class="org.example.pojo3.Student">
+        <constructor-arg index="0" value="我的超"></constructor-arg>
+        <constructor-arg index="1" value="22"></constructor-arg>
+        <constructor-arg index="2" ref="school"></constructor-arg>
+    </bean>
+
+    <!--创建学生对象，使用构造方法的默认形式 注入值-->
+    <bean id="student2" class="org.example.pojo3.Student">
+        <constructor-arg  value="我的超"></constructor-arg>
+        <constructor-arg  value="22"></constructor-arg>
+        <constructor-arg  ref="school"></constructor-arg>
+    </bean>
+</beans>
