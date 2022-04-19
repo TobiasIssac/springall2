@@ -9,6 +9,7 @@ public class MyTest {
     public void testInsertUsers(){
         UserController userController = new UserController();
         int num = userController.insert(new Users(100,22,"张三"));
+        System.out.println(num);
 
     }
 }
