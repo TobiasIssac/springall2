@@ -11,5 +11,6 @@ public class MyTest {
         int num = userController.insert(new Users(100,22,"张三"));
         System.out.println(num);
 
+
     }
 }
