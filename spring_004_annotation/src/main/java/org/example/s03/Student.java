@@ -13,6 +13,8 @@ public class Student {
     @Value("22")
     private int age;
 
+/*    @Autowired
+    @Qualifier("schoolNew") */
     @Autowired
     @Qualifier("subschool")
     private School school;
